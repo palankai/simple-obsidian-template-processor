@@ -11,7 +11,8 @@
     "prettier": "prettier --write src/ tests/",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix src tests",
     "test": "jest --verbose src tests",
-    "precommit": "yarn test && yarn eslint && yarn prettier"
+    "auditfix": "npm_config_yes=true npx yarn-audit-fix --silent",
+    "precommit": "yarn test && yarn eslint && yarn prettier && yarn auditfix"
   },
   "devDependencies": {
     "@types/jest": "^29.0.0",
