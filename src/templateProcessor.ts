@@ -10,12 +10,12 @@ export class TemplateProcessor {
     if (params) {
       for (const key in params) {
         if (typeof params[key] == 'function') {
-          const re = new RegExp(`{{\\s*${key}(:(.*))?\\s*}}`, 'gi');
+          const re = new RegExp(`{{${key}(:(.*))?}}`, 'gi');
           result = result.replace(re, (_1, _2, param?: string) => {
             return params[key](param ? param.trim() : param);
           });
         } else {
-          const re = new RegExp(`{{\\s*${key}\\s*}}`, 'gi');
+          const re = new RegExp(`{{${key}}}`, 'gi');
           result = result.replace(re, params[key]);
         }
       }
