@@ -11,6 +11,7 @@
     "test": "jest --verbose src tests",
     "prettier": "prettier src/ tests/",
     "prettier:fix": "yarn prettier --write",
+    "prettier:ci": "yarn prettier --check || true",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src tests",
     "lint:fix": "yarn lint --fix",
     "audit:fix": "npm_config_yes=true npx yarn-audit-fix --silent",
