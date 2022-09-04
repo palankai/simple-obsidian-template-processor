@@ -15,7 +15,7 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src tests",
     "lint:fix": "yarn lint --fix",
     "audit:fix": "npm_config_yes=true npx yarn-audit-fix --silent",
-    "precommit": "yarn test && yarn lint:fix && yarn prettier:fix && yarn audit:fix"
+    "precommit": "yarn test && yarn lint:fix && yarn prettier:fix && yarn audit:fix && yarn build"
   },
   "devDependencies": {
     "@types/jest": "^29.0.0",
