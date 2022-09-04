@@ -8,11 +8,13 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "prettier": "prettier --write src/ tests/",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix src tests",
     "test": "jest --verbose src tests",
-    "auditfix": "npm_config_yes=true npx yarn-audit-fix --silent",
-    "precommit": "yarn test && yarn eslint && yarn prettier && yarn auditfix"
+    "prettier": "prettier src/ tests/",
+    "prettier:fix": "yarn prettier --write",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src tests",
+    "lint:fix": "yarn lint --fix",
+    "audit:fix": "npm_config_yes=true npx yarn-audit-fix --silent",
+    "precommit": "yarn test && yarn lint:fix && yarn prettier:fix && yarn audit:fix"
   },
   "devDependencies": {
     "@types/jest": "^29.0.0",
