@@ -1,9 +1,12 @@
 {
   "name": "simple-obsidian-template-processor",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Unofficial Obsidian template processor",
   "main": "dist/templateProcessor.js",
-  "types": "dist/templateProcessor.d.js",
+  "types": "dist/templateProcessor.d.ts",
+  "files": [
+    "dist/*"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/palankai/simple-obsidian-template-processor"
