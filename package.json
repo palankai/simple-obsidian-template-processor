@@ -1,6 +1,6 @@
 {
   "name": "simple-obsidian-template-processor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Unofficial Obsidian template processor",
   "main": "dist/templateProcessor.js",
   "types": "dist/templateProcessor.d.js",
@@ -12,7 +12,10 @@
     "url": "https://github.com/palankai/simple-obsidian-template-processor/issues"
   },
   "author": "Csaba Palankai <csaba.palankai[at]gmail.com>",
-  "keywords": ["obsidian", "template"],
+  "keywords": [
+    "obsidian",
+    "template"
+  ],
   "license": "MIT",
   "scripts": {
     "prepublishOnly": "yarn precommit",
